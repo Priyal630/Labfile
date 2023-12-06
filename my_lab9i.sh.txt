@@ -1,0 +1,14 @@
+#!/bin/bash
+
+# Set the prefix or suffix to add to the file names
+prefix="my_"
+suffix=".txt"
+
+# Loop through all files in the current directory
+for file in *; do
+  # Add the prefix and/or suffix to the file name
+  new_file_name="${prefix}${file}${suffix}"
+  
+  # Rename the file
+  mv "$file" "${new_file_name}"
+done
